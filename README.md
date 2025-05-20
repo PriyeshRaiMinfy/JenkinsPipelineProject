@@ -8,6 +8,7 @@ This project showcases a simple CI/CD pipeline configured using Jenkins. The goa
 
 --- Jenkins Dashboard
 ![Jenkins Dashboard before Job Creation](<screenshots/Dashboard.png>)
+--- Console Output Before Job Creation
 ![Console Output Before Job Creation](<screenshots/ConsoleOutput_Before.png>)
 
 ```
@@ -51,12 +52,21 @@ pipeline {
 ```
 
 
+--- Stage View
 ![Stage View](<screenshots/StageView.png>)
 
+
+--- Status
 ![Status](<screenshots/Status.png>)
 
+
+--- Console Output After creating the Job
 ![Console Output After creating the Job](<screenshots/ConsoleOutput_After.png>)
 
+
+--- Jenkins Dashboard After Job Creation
 ![Jenkins Dashboard After Job Creation](<screenshots/Dashboard_AfterJobCreation.png>)
+
+--- Stages
 ![Stages](<screenshots/Stages.png>)
 
