@@ -6,3 +6,57 @@ This project showcases a simple CI/CD pipeline configured using Jenkins. The goa
 - login
 - **Dashboard** -> **Build Queue** -> **Build Executor Status**
 
+--- Jenkins Dashboard
+![Jenkins Dashboard before Job Creation](<screenshots/Dashboard.png>)
+![Console Output Before Job Creation](<screenshots/ConsoleOutput_Before.png>)
+
+```
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                sh 'sleep 5' // Simulate build time
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'sleep 3' // Simulate test time
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                sh 'sleep 2' // Simulate deployment
+            }
+        }
+        stage('Cleanup') {
+            steps {
+                echo 'Cleaning up...'
+                sh 'sleep 1'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline execution failed!'
+        }
+    }
+}
+```
+
+
+![Stage View](<screenshots/StageView.png>)
+
+![Status](<screenshots/Status.png>)
+
+![Console Output After creating the Job](<screenshots/ConsoleOutput_After.png>)
+
+![Jenkins Dashboard After Job Creation](<screenshots/Dashboard_AfterJobCreation.png>)
+![Stages](<screenshots/Stages.png>)
+
